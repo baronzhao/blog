@@ -13,7 +13,6 @@
     },
     "plugins": [
         "github@^2.0.0",
-        "edit-link@^2.0.2",
         "anchors@^0.7.1",
         "include-codeblock@^3.0.2",
         "splitter@^0.0.8",
@@ -38,10 +37,6 @@
             "copyright": "Copyright © 赵国勇 2019",
             "modify_label": "该文件修订时间：",
             "modify_format": "YYYY-MM-DD HH:mm:ss"
-        },
-        "edit-link": {
-            "base": "https://github.com/baronzhao/blog/tree/master",
-            "label": "Edit This Page"
         },
         "anchor-navigation-ex": {
             "isRewritePageTitle": false,
