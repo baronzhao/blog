@@ -7,7 +7,7 @@
     "head_keywords": "Baron Zhao's Blog",
     "logo": "./images/logo.png",
 
-    "gitbook": "3.2.3",
+    "gitbook": ">= 3.0.0",
 
     "language": "zh-hans",
 
