@@ -2,3 +2,7 @@
 /_book_cache
 /node_modules
 search_pro_index.json
+
+# for Mac OS X System Files
+.DS_Store
+Thumbs.db
