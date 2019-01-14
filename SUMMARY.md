@@ -1,2 +1,4 @@
 - [写在首页](README.md)
 - [新年计划](201901-big-plans-in-2019.md)
+- [技术杂谈](tech/README.md)
+   - [Markdown语法](tech/201901-markdown-rules.md)
