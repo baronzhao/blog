@@ -1,7 +1,5 @@
 # Markdown语法
-1. 简明教程  
-    https://ouweiya.github.io/
-2. 需要转义的字符
+1. 需要转义的字符
     ```
     \\ 反斜杠 \
     \` 反引号 `
