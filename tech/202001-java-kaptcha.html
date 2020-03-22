@@ -1,0 +1,439 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>验证码组件Kaptcha : Baron Zhao's Blog</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="好记性不如烂笔头，记录日常遇到的问题及学习的成果">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    <meta name="keywords" content="Baron Zhao's Blog">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+     
+    <link rel="stylesheet" href="../assets/website/page_custom.min.css">
+    
+    <link rel="next" href="../plans/" />
+    
+    
+    <link rel="prev" href="201901-easy-scrum-tour-1.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="gb-page-wrapper">
+    <header class="gb-page-header">
+        <div class="container">
+        
+            <!-- search_input -->
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="输入并搜索" />
+            </div>
+            <!-- search_input -->
+            
+            <a href=".." class="logo">
+                <img src="../assets/images/logo.png"/>
+            </a>
+            
+            <a href=".." class="logo">
+                <h1>Baron Zhao's Blog</h1>
+            </a>
+        
+        </div>
+    </header>
+
+    <div class="gb-page-body">
+        <div class="gb-page-inner">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        
+
+
+
+    
+    <div class="panel panel-default">
+        
+
+        <div class="list-group">
+            
+    
+        
+        <a href="../" class="list-group-item ">
+        
+
+            
+
+            
+
+            写在首页
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="../202001-big-plans-in-2020.html" class="list-group-item ">
+        
+
+            
+
+            
+
+            新年计划
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="./" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-down"></i>
+            
+
+            技术杂谈
+
+        
+        </a>
+        
+
+        
+        
+    
+        
+        <a href="201901-markdown-rules.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            Markdown语法
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="201901-easy-scrum-tour-1.html" class="list-group-item ">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            轻松Scrum之旅1
+
+        
+        </a>
+        
+
+        
+    
+        
+        <a href="202001-java-kaptcha.html" class="list-group-item active">
+        
+
+            
+            <i class="octicon octicon-chevron-down" style="opacity: 0"></i>
+            
+
+            
+
+            验证码组件Kaptcha
+
+        
+        </a>
+        
+
+        
+    
+
+        
+    
+        
+        <a href="../plans/" class="list-group-item ">
+        
+
+            
+
+            
+            <i class="octicon octicon-chevron-right"></i>
+            
+
+            历年计划
+
+        
+        </a>
+        
+
+        
+    
+
+        </div>
+    </div>
+    
+
+
+
+                    </div>
+                    <div class="col-md-9">
+                        <!-- search_result -->
+                        <div id="book-search-results">
+                            <div class="search-noresults">
+                                
+                                <!-- page -->
+                                
+                                <div class="gb-markdown book-page-inner page-inner">
+                                    <h1 id="google-kaptcha-&#x9A8C;&#x8BC1;&#x7801;&#x7EC4;&#x4EF6;">Google Kaptcha &#x9A8C;&#x8BC1;&#x7801;&#x7EC4;&#x4EF6;</h1>
+<p>Kaptcha &#x662F;&#x8C37;&#x6B4C;&#x5F00;&#x6E90;&#x7684;&#x975E;&#x5E38;&#x5B9E;&#x7528;&#x7684;&#x9A8C;&#x8BC1;&#x7801;&#x751F;&#x6210;&#x5DE5;&#x5177;&#xFF0C;&#x57FA;&#x4E8E;SimpleCaptcha&#x7684;&#x5F00;&#x6E90;&#x9879;&#x76EE;&#x3002;&#x4F7F;&#x7528; Kaptcha &#x751F;&#x6210;&#x9A8C;&#x8BC1;&#x7801;&#x5341;&#x5206;&#x7B80;&#x5355;&#x5E76;&#x4E14;&#x53C2;&#x6570;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x81EA;&#x5B9A;&#x4E49;&#x3002;&#x53EA;&#x9700;&#x6DFB;&#x52A0;jar&#x5305;&#x914D;&#x7F6E;&#x4E0B;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#xFF0C;&#x901A;&#x8FC7;&#x914D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;&#x9A8C;&#x8BC1;&#x7801;&#x5927;&#x5C0F;&#x3001;&#x989C;&#x8272;&#x3001;&#x663E;&#x793A;&#x7684;&#x5B57;&#x7B26;&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x5176;&#x539F;&#x7406;&#x662F;&#x4F7F;&#x7528;java.awt.Graphics2D&#x5B9E;&#x73B0;&#x7ED8;&#x56FE;&#x529F;&#x80FD;:</p>
+<ul>
+<li>new&#x4E00;&#x4E2A;BufferedImage&#x3002;new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);</li>
+<li>&#x57FA;&#x4E8E;&#x6B64;BufferedImage&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7ED8;&#x56FE;&#x5BF9;&#x8C61;&#xFF0C;&#x5373;&#x4F7F;&#x7528; createGraphics &#x65B9;&#x6CD5;&#xFF0C;&#x5F97; Graphics2D &#x5B9E;&#x4F8B;&#x3002;</li>
+<li>&#x4F7F;&#x7528;Graphics2D &#x5B9E;&#x4F8B;&#x8FDB;&#x884C;&#x753B;&#x56FE;&#xFF0C;&#x6240;&#x6709;&#x7ED8;&#x56FE;&#x5750;&#x6807;&#x57FA;&#x4E8E;&#x521B;&#x5EFA;&#x6B64;Graphics2D &#x7684;BufferedImage&#x3002;</li>
+<li>&#x8C03;&#x7528;Graphics2D &#x5BF9;&#x8C61;&#x7684; dispose() &#x65B9;&#x6CD5;&#xFF0C;&#x8FDB;&#x884C;&#x7ED8;&#x56FE;&#x5904;&#x7406;&#xFF0C;&#x4F7F;&#x7ED8;&#x56FE;&#x6548;&#x679C;&#x5E94;&#x7528;&#x5230;BufferedImage &#x5BF9;&#x8C61;&#x3002;</li>
+</ul>
+<p>&#x4E0B;&#x9762;&#x5C31;&#x6765;&#x8BB2;&#x4E00;&#x4E0B;&#x5982;&#x4F55;&#x4F7F;&#x7528;kaptcha&#x751F;&#x6210;&#x9A8C;&#x8BC1;&#x7801;&#x4EE5;&#x53CA;&#x5728;&#x670D;&#x52A1;&#x5668;&#x7AEF;&#x53D6;&#x51FA;&#x9A8C;&#x8BC1;&#x7801;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#x3002;</p>
+<p>Spring&#x9879;&#x76EE;&#x4F7F;&#x7528;Kaptcha&#x80AF;&#x5B9A;&#x8981;&#x4F9D;&#x8D56;kaptcha&#x7684;jar&#xFF0C;maven&#x9879;&#x76EE;&#x7684;&#x8BDD;&#x76F4;&#x63A5;&#x52A0;&#x5165;&#x5982;&#x4E0B;&#x4F9D;&#x8D56;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.github.penggle<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>kaptcha<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.3.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<p>&#x8FDB;&#x4E00;&#x6B65;&#x4E86;&#x89E3;bean&#x914D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5B98;&#x65B9;wiki&#xFF1A;<a href="https://code.google.com/archive/p/kaptcha/wikis" target="_blank">https://code.google.com/archive/p/kaptcha/wikis</a></p>
+<p>&#x53C2;&#x8003;&#x6587;&#x4EF6;&#x5907;&#x4EFD;&#xFF1A;<a href="../copy/kaptcha/HowToUse.pdf">HowToUse</a>&#x3001;<a href="../copy/kaptcha/SpringUsage.pdf">SpringUsage</a>&#x3001;<a href="../copy/kaptcha/ConfigParameters.pdf">ConfigParameters</a>&#x3001;<a href="../copy/kaptcha/FrequentlyAskedQuestions.pdf">FrequentlyAskedQuestions</a></p>
+<p>&#x8FDB;&#x4E00;&#x6B65;&#x4E86;&#x89E3;SpringBoot&#x96C6;&#x6210;Kaptcha&#xFF0C;&#x53EF;&#x4EE5;&#x53C2;&#x8003;&#x5F00;&#x6E90;&#x9879;&#x76EE;README:</p>
+<p><a href="https://gitee.com/baomidou/kaptcha-spring-boot-starter" target="_blank">https://gitee.com/baomidou/kaptcha-spring-boot-starter</a></p>
+<h1 id="&#x7B80;&#x5355;&#x5FEB;&#x901F;&#x96C6;&#x6210;-google-kaptcha&#x9A8C;&#x8BC1;&#x7801;">&#x7B80;&#x5355;&#x5FEB;&#x901F;&#x96C6;&#x6210; Google Kaptcha&#x9A8C;&#x8BC1;&#x7801;</h1>
+<h2 id="&#x5982;&#x4F55;&#x4F7F;&#x7528;">&#x5982;&#x4F55;&#x4F7F;&#x7528;</h2>
+<ol>
+<li>&#x5F15;&#x5165; kaptcha-datasource-spring-boot-starter&#x3002;</li>
+</ol>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>com.baomidou<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>kaptcha-spring-boot-starter<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>${version}<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span>
+</code></pre>
+<ol>
+<li>&#x5728;Controller&#x4F7F;&#x7528;<code>Kaptcha</code>&#x3002;</li>
+</ol>
+<pre><code class="lang-java"><span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/kaptcha&quot;</span>)
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">KaptchaController</span> </span>{
+
+  <span class="hljs-meta">@Autowired</span>
+  <span class="hljs-keyword">private</span> Kaptcha kaptcha;
+
+  <span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">&quot;/render&quot;</span>)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">render</span><span class="hljs-params">()</span> </span>{
+    kaptcha.render();
+  }
+
+  <span class="hljs-meta">@PostMapping</span>(<span class="hljs-string">&quot;/valid&quot;</span>)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">validDefaultTime</span><span class="hljs-params">(@RequestParam String code)</span> </span>{
+    <span class="hljs-comment">//default timeout 900 seconds</span>
+    kaptcha.validate(code);
+  }
+
+  <span class="hljs-meta">@PostMapping</span>(<span class="hljs-string">&quot;/validTime&quot;</span>)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">validCustomTime</span><span class="hljs-params">(@RequestParam String code)</span> </span>{
+    kaptcha.validate(code, <span class="hljs-number">60</span>);
+  }
+
+}
+</code></pre>
+<ol>
+<li>&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x4F1A;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x5EFA;&#x8BAE;&#x4F7F;&#x7528;&#x5168;&#x5C40;&#x5F02;&#x5E38;&#x6765;&#x5904;&#x7406;&#x3002;</li>
+</ol>
+<pre><code class="lang-java">KaptchaException  <span class="hljs-comment">//super Exception</span>
+
+KaptchaIncorrectException
+
+KaptchaNotFoundException
+
+KaptchaTimeoutException
+
+KaptchaRenderException <span class="hljs-comment">//If something is wrong then Image.write when render.</span>
+</code></pre>
+<pre><code class="lang-java"><span class="hljs-keyword">import</span> com.baomidou.kaptcha.exception.KaptchaException;
+<span class="hljs-keyword">import</span> com.baomidou.kaptcha.exception.KaptchaIncorrectException;
+<span class="hljs-keyword">import</span> com.baomidou.kaptcha.exception.KaptchaNotFoundException;
+<span class="hljs-keyword">import</span> com.baomidou.kaptcha.exception.KaptchaTimeoutException;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.ExceptionHandler;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestControllerAdvice;
+
+<span class="hljs-meta">@RestControllerAdvice</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">GlobalExceptionHandler</span> </span>{
+
+  <span class="hljs-meta">@ExceptionHandler</span>(value = KaptchaException.class)
+  <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">kaptchaExceptionHandler</span><span class="hljs-params">(KaptchaException kaptchaException)</span> </span>{
+    <span class="hljs-keyword">if</span> (kaptchaException <span class="hljs-keyword">instanceof</span> KaptchaIncorrectException) {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x9A8C;&#x8BC1;&#x7801;&#x4E0D;&#x6B63;&#x786E;&quot;</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (kaptchaException <span class="hljs-keyword">instanceof</span> KaptchaNotFoundException) {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x9A8C;&#x8BC1;&#x7801;&#x672A;&#x627E;&#x5230;&quot;</span>;
+    } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (kaptchaException <span class="hljs-keyword">instanceof</span> KaptchaTimeoutException) {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x9A8C;&#x8BC1;&#x7801;&#x8FC7;&#x671F;&quot;</span>;
+    } <span class="hljs-keyword">else</span> {
+      <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;&#x9A8C;&#x8BC1;&#x7801;&#x6E32;&#x67D3;&#x5931;&#x8D25;&quot;</span>;
+    }
+
+  }
+
+}
+</code></pre>
+<ol>
+<li>&#x81EA;&#x5B9A;&#x4E49;&#x9A8C;&#x8BC1;&#x7801;&#x53C2;&#x6570;,&#x4EE5;&#x4E0B;&#x4E3A;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;&#x3002;</li>
+</ol>
+<pre><code class="lang-yaml"><span class="hljs-attr">kaptcha:</span>
+<span class="hljs-attr">  height:</span> <span class="hljs-number">50</span>
+<span class="hljs-attr">  width:</span> <span class="hljs-number">200</span>
+<span class="hljs-attr">  content:</span>
+<span class="hljs-attr">    length:</span> <span class="hljs-number">4</span>
+<span class="hljs-attr">    source:</span> abcdefghjklmnopqrstuvwxyz23456789
+<span class="hljs-attr">    space:</span> <span class="hljs-number">2</span>
+<span class="hljs-attr">  font:</span>
+<span class="hljs-attr">    color:</span> black
+<span class="hljs-attr">    name:</span> Arial
+<span class="hljs-attr">    size:</span> <span class="hljs-number">40</span>
+<span class="hljs-attr">  background-color:</span>
+<span class="hljs-attr">    from:</span> lightGray
+<span class="hljs-attr">    to:</span> white
+<span class="hljs-attr">  border:</span>
+<span class="hljs-attr">    enabled:</span> <span class="hljs-literal">true</span>
+<span class="hljs-attr">    color:</span> black
+<span class="hljs-attr">    thickness:</span> <span class="hljs-number">1</span>
+</code></pre>
+
+                                </div>
+                                
+                                <!-- page -->
+
+                            </div>
+                            <div class="search-results">
+                                <div class="has-results">
+                                    
+                                    <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+                                    <ul class="search-results-list"></ul>
+                                    
+                                </div>
+                                <div class="no-results">
+                                    
+                                    <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- search_result -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="gb-page-footer">
+        <div class="container footer-container">
+            <div class="copyright">
+                © 2019 <a href="http://baronzhao.com">赵国勇</a> all right reserved，powered by Gitbook
+            </div>
+        </div>
+    </footer>
+</div>
+
+<script src="../gitbook/gitbook.js"></script>
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+    
+
+    
+    <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+    
+
+
+<script>
+    var gitbook = gitbook || [];
+    gitbook.push(function() {
+        gitbook.page.hasChanged({"page":{"title":"验证码组件Kaptcha","level":"1.3.3","depth":2,"next":{"title":"历年计划","level":"1.4","depth":1,"path":"plans/README.md","ref":"plans/README.md","articles":[{"title":"2019","level":"1.4.1","depth":2,"path":"plans/201901-big-plans-in-2019.md","ref":"plans/201901-big-plans-in-2019.md","articles":[]}]},"previous":{"title":"轻松Scrum之旅1","level":"1.3.2","depth":2,"path":"tech/201901-easy-scrum-tour-1.md","ref":"tech/201901-easy-scrum-tour-1.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","-lunr","-search","search-pro","theme-official","sitemap-general"],"root":"./","styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"sitemap-general":{"prefix":"http://www.baronzhao.com/"},"search-pro":{},"highlight":{},"theme-official":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","head_keywords":"Baron Zhao's Blog","logo":"assets/images/logo.png","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Baron Zhao's Blog","language":"zh-hans","icon":"assets/images/favicon.ico","head_title":" : Baron Zhao's Blog","gitbook":">= 3.0.0","description":"好记性不如烂笔头，记录日常遇到的问题及学习的成果","head_description":"好记性不如烂笔头，记录日常遇到的问题及学习的成果"},"file":{"path":"tech/202001-java-kaptcha.md","mtime":"2020-03-22T03:39:53.879Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-03-22T04:47:33.928Z"},"basePath":"..","book":{"language":""}});
+    });
+</script>
+<script>
+    $('.book-page-inner h1,.book-page-inner h2,.book-page-inner h3,.book-page-inner h4,.book-page-inner h5,.book-page-inner h6').click(function(){
+        var id = $(this).attr('id');
+        if(id) {
+            window.location.hash=id;
+        }
+    });
+</script>
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?8bf88b96b976f6ee6e6c215f2867fcdc";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+        
+    </body>
+</html>
+
