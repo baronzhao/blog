@@ -9,8 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    
+    {% if config.icon %}
+    <link rel="shortcut icon" href="{{ config.icon|resolveFile }}" type="image/x-icon">
+     {% endif %}
     <link rel="stylesheet" href="{{ 'assets/website/page_custom.min.css'|resolveFile }}">
     {% if page.next and page.next.path %}
     <link rel="next" href="{{ page.next.path|resolveFile }}" />
@@ -30,11 +31,9 @@
                 <input type="text" placeholder="{{ 'SEARCH_PLACEHOLDER'|t }}" />
             </div>
             <!-- search_input -->
-
             {% if config.logo %}
             <a href="{{ "/"|resolveFile }}" class="logo">
-                <!-- <img src="{{ config.logo|resolveFile }}"> -->
-                <img src="/images/logo.png"/>
+                <img src="{{ config.logo|resolveFile }}"/>
             </a>
             {% endif %}
             <a href="{{ "/"|resolveFile }}" class="logo">
